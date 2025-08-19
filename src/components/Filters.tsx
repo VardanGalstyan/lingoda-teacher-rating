@@ -1,9 +1,8 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { BarsArrowDownIcon } from "@heroicons/react/20/solid";
-import { classNames } from "../utils";
-import { searchStore, sortStore, filterStore } from "../store";
-import { FunnelIcon } from "@heroicons/react/24/outline";
+import { BarsArrowDownIcon, FunnelIcon } from "@heroicons/react/24/outline";
 import { useStore } from "@nanostores/react";
+import { filterStore, searchStore, sortStore } from "../store";
+import { classNames } from "../utils";
 
 const sortOptions = [
   { name: "Best Rating", current: true },
@@ -25,7 +24,7 @@ export default function Filters() {
     <div className="flex w-full items-center ">
       <div className="w-full max-w-sm">
         <div className="">
-          <div className="flex rounded-md bg-white outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 outline-none dark:bg-white/5 dark:outline-1 dark:-outline-offset-1 dark:outline-white/10 dark:focus-within:outline-indigo-500">
+          <div className="flex  bg-gray-800 outline-1 -outline-offset-1 outline-gray-300 focus-within:outline-2 focus-within:-outline-offset-2 outline-none">
             <input
               id="search"
               name="search"
@@ -38,11 +37,11 @@ export default function Filters() {
           </div>
         </div>
       </div>
-      <div className="col-start-1 row-start-1 py-4 flex ">
-        <div className="mx-auto flex max-w-7xl justify-end px-4 sm:px-6 lg:px-8">
+      <div className="col-start-1 row-start-1 py-4 flex ml-4">
+        <div className="border-r border-white/10">
           <Menu as="div" className="relative inline-block">
             <div className="flex">
-              <MenuButton className="group inline-flex cursor-pointer outline-none justify-center items-center text-sm font-medium text-white hover:text-gray-100 hover:bg-white/10 p-2 rounded-sm">
+              <MenuButton className="group inline-flex cursor-pointer outline-none justify-center items-center text-sm font-medium text-white hover:text-gray-100 hover:bg-white/10 p-2">
                 <span className="mb-1">Sort</span>
                 <BarsArrowDownIcon
                   aria-hidden="true"
@@ -79,10 +78,10 @@ export default function Filters() {
             </MenuItems>
           </Menu>
         </div>
-        <div className="mx-auto flex max-w-7xl justify-end px-4 sm:px-6 lg:px-8">
+        <div>
           <Menu as="div" className="relative inline-block">
             <div className="flex">
-              <MenuButton className="group inline-flex cursor-pointer outline-none justify-center items-center text-sm font-medium text-white hover:text-gray-100 hover:bg-white/10 p-2 rounded-sm">
+              <MenuButton className="group inline-flex cursor-pointer outline-none justify-center items-center text-sm font-medium text-white hover:text-gray-100 hover:bg-white/10 p-2">
                 <span className="mb-1">Filter</span>
                 <FunnelIcon
                   aria-hidden="true"
