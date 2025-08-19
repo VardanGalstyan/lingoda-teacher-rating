@@ -83,6 +83,7 @@ export default function Modal() {
                     id="name"
                     name="name"
                     type="text"
+                    required
                     placeholder="Jane Smith"
                     value={teacher.name}
                     onChange={(e) =>
@@ -102,6 +103,7 @@ export default function Modal() {
                     id="image"
                     name="image"
                     type="text"
+                    required
                     placeholder="https://placehold.co/600x400"
                     value={teacher.imageUrl}
                     onChange={(e) =>
