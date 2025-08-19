@@ -13,6 +13,9 @@ export const teachersStore = persistentAtom<TeacherType[]>(
 
 export const modalStore = atom<boolean>(false);
 export const editTeacherStore = atom<string>("");
+export const searchStore = atom<string>("");
+export const sortStore = atom<"best" | "worst">("best");
+export const filterStore = atom<number[]>([0]);
 
 export const resetStores = () => {
   modalStore.set(false);
