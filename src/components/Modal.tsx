@@ -49,6 +49,7 @@ export default function Modal() {
       teachersStore.set([...teachers, { ...teacher, id: uuidv4() }]);
     }
     resetStores();
+    setTeacher(initialState);
   }
 
   // Function to close the modal and reset the teacher state
