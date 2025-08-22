@@ -103,7 +103,7 @@ export default function StackedList() {
               <tbody className="divide-y divide-gray-200 bg-white dark:divide-white/10 dark:bg-gray-900">
                 {filteredTeachers.map((person) => (
                   <tr key={person.id}>
-                    <td className="py-2 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0">
+                    <td className="py-2 pr-3 pl-4 text-sm whitespace-nowrap sm:pl-0 min-w-40">
                       <div className="flex items-center">
                         <div className="size-11 shrink-0">
                           <img
@@ -119,13 +119,13 @@ export default function StackedList() {
                         </div>
                       </div>
                     </td>
-                    <td className="px-3 py-5 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">
+                    <td className="px-3 py-5 text-sm text-gray-500 dark:text-gray-400">
                       <div className="text-gray-900 dark:text-white">
                         {person.comment}
                       </div>
                     </td>
 
-                    <td className="px-3 py-5 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">
+                    <td className="px-3 py-5 text-sm whitespace-nowrap min-w-32  text-gray-500 dark:text-gray-400">
                       <Rating
                         style={{ maxWidth: 100 }}
                         value={person.rating}
