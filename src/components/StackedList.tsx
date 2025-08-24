@@ -70,7 +70,7 @@ export default function StackedList() {
           </div>
         </div>
       </div>
-      <div className="flow-root mt-26 pt-10">
+      <div className="flow-root mt-26 py-10">
         <div className="">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
             <table className="relative min-w-full divide-y divide-gray-300 dark:divide-white/15">
