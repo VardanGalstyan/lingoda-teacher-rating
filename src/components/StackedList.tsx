@@ -56,8 +56,8 @@ export default function StackedList() {
 
   return (
     <div className="w-full bg-gray-900">
-      <div className=" py-2 align-middle sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+      <div className="fixed py-2 align-middle sm:px-6 lg:px-8 top-16 left-0 right-0 z-20 bg-gray-900">
+        <div className="flex justify-between items-center inset-0 sticky z-50 bg-gray-900 w-full max-w-7xl  mx-auto">
           <Filters />
           <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
             <button
@@ -65,12 +65,12 @@ export default function StackedList() {
               type="button"
               className="block rounded-md border-[1px] border-white/20 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
             >
-              Add Teacher
+              Add a Teacher
             </button>
           </div>
         </div>
       </div>
-      <div className="flow-root">
+      <div className="flow-root mt-26 pt-10">
         <div className="">
           <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
             <table className="relative min-w-full divide-y divide-gray-300 dark:divide-white/15">

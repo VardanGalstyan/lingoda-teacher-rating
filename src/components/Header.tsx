@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="py-4 uppercase bg-gray-800">
+    <header className="py-4 uppercase bg-gray-800 fixed w-full top-0 z-50">
       <div className="max-w-7xl flex mx-auto px-8  justify-between items-center">
         <img
           src="https://avatars.githubusercontent.com/u/5747562?s=280&v=4"
