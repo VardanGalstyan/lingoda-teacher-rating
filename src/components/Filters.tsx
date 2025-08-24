@@ -9,8 +9,8 @@ import { filterStore, searchStore, sortStore } from "../store";
 import { classNames } from "../utils";
 
 const sortOptions = [
-  { name: "Best Rating", current: true },
-  { name: "Worst Rating", current: false },
+  { name: "Best Rating", value: "best", current: true },
+  { name: "Worst Rating", value: "worst", current: false },
 ];
 
 const filterOptions = [
@@ -71,15 +71,13 @@ export default function Filters() {
                   <MenuItem key={option.name}>
                     <span
                       onClick={() =>
-                        sortStore.set(
-                          option.name === "Best Rating" ? "best" : "worst"
-                        )
+                        sortStore.set(option.value as "best" | "worst")
                       }
                       className={classNames(
-                        option.current
+                        option.value === sortStoreValue
                           ? "font-medium text-gray-900"
                           : "text-gray-500",
-                        "block px-4 py-2 text-sm data-focus:bg-gray-100 data-focus:outline-hidden"
+                        "block px-4 py-2 text-sm cursor-pointer data-focus:bg-gray-100 data-focus:outline-hidden"
                       )}
                     >
                       {option.name}
@@ -127,7 +125,7 @@ export default function Filters() {
                         filterIds.includes(option.id)
                           ? "font-medium bg-amber-100"
                           : "",
-                        "block px-4  text-gray-800 py-2 text-xs data-focus:bg-gray-100 data-focus:outline-hidden"
+                        "block px-4 cursor-pointer  text-gray-800 py-2 text-xs data-focus:bg-gray-100 data-focus:outline-hidden"
                       )}
                     >
                       {option.name}
