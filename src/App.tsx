@@ -4,7 +4,7 @@ import StackedList from "./components/StackedList";
 
 function App() {
   return (
-    <section className="w-full h-screen bg-gray-900 ">
+    <section className="w-full min-h-screen h-full bg-gray-900 ">
       <Header />
       <div className="max-w-7xl mx-auto">
         <StackedList />

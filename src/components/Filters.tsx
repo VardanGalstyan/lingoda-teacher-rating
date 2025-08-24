@@ -1,5 +1,9 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { BarsArrowDownIcon, FunnelIcon } from "@heroicons/react/24/outline";
+import {
+  BarsArrowDownIcon,
+  BarsArrowUpIcon,
+  FunnelIcon,
+} from "@heroicons/react/24/outline";
 import { useStore } from "@nanostores/react";
 import { filterStore, searchStore, sortStore } from "../store";
 import { classNames } from "../utils";
@@ -20,6 +24,7 @@ const filterOptions = [
 
 export default function Filters() {
   const filterIds = useStore(filterStore);
+  const sortStoreValue = useStore(sortStore);
   return (
     <div className="flex w-full items-center ">
       <div className="w-full max-w-sm">
@@ -43,10 +48,17 @@ export default function Filters() {
             <div className="flex">
               <MenuButton className="group inline-flex cursor-pointer outline-none justify-center items-center text-sm font-medium text-white hover:text-gray-100 hover:bg-white/10 p-2">
                 <span className="mb-1">Sort</span>
-                <BarsArrowDownIcon
-                  aria-hidden="true"
-                  className="ml-1 size-4 shrink-0 text-white group-hover:text-gray-100"
-                />
+                {sortStoreValue === "best" ? (
+                  <BarsArrowDownIcon
+                    aria-hidden="true"
+                    className="ml-1 size-4 shrink-0 text-white group-hover:text-gray-100"
+                  />
+                ) : (
+                  <BarsArrowUpIcon
+                    aria-hidden="true"
+                    className="ml-1 size-4 shrink-0 text-white group-hover:text-gray-100"
+                  />
+                )}
               </MenuButton>
             </div>
 
